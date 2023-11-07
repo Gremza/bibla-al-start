@@ -11,7 +11,7 @@
  * Plugin Name:   Bibla.al start
  * Plugin URI:    https://bibla.al
  * Description:   Perdor shortcode [start] per te paraqitur permbajtjen.Nje oreks ndjelles per te filluar leximin e bibles.
- * Version:       2.0.0
+ * Version:       2.1.0
  * Author:        Marsel Preci
  * Author URI:    https://gremza.com
  * Text Domain:   bibla-al-start
@@ -43,6 +43,13 @@ function start() {
      height:25px;
      	fill:<?php echo $acf['txt_color'];?>;
  }
+.center{
+	margin:auto;
+	max-width:600px;
+	 display: flex;
+  align-items: center;
+  justify-content: center;
+}
 	.vargucontent{
 		background-image:url('<?php echo $acf['bg_image'];?>');
 		background-size:cover;
@@ -68,14 +75,14 @@ function start() {
 		float: left;
 		padding-top: 20px;
 	}
-	.vargu{
+	.vargustory{
 		font-size:18px; 
 	}
-</style> 
+</style>  
 <?php if ($acf['content']):?>
  <div class="vargucontent"> 
 	<h2><?php echo $acf['title'];?></h2>
-	<div class="vargu"><?php echo $acf['content'];?></div>
+	<div class="vargustory"><?php echo $acf['content'];?></div>
 	<div class="referenca"><?php echo $acf['book_name'].' '.$acf['chapter_name'].':'.$acf['verse_number'];?></div>	
 	<div class="lexoneapp">Më shumë në app <span><a href="https://apps.apple.com/us/app/bibla-shqip-bibla-al/id6463127209"> <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -188,5 +195,4 @@ function start() {
 
   
 	// register shortcode
-add_shortcode('start', 'start'); 
-
+add_shortcode('start', 'start');
